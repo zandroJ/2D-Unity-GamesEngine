@@ -7,7 +7,7 @@ public class BackgroundMusic : MonoBehaviour
     public static BackgroundMusic bgm;
     public AudioSource audioSource;
     public AudioClip backgroundMusic; //   field to hold the background music
-
+    
     void Awake()
     {
         if(bgm == null){
@@ -36,4 +36,7 @@ public class BackgroundMusic : MonoBehaviour
         audioSource.clip = newClip;
         audioSource.Play();
     }
+    public void StopMusic( ){ //stop music
+    audioSource.Stop();
+}
 }
